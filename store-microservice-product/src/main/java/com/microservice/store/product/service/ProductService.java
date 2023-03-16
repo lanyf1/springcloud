@@ -1,6 +1,6 @@
 package com.microservice.store.product.service;
 
-import com.microservice.store.product.domain.Product;
+import com.microservice.store.infrastructure.domain.Product;
 
 public interface ProductService {
 

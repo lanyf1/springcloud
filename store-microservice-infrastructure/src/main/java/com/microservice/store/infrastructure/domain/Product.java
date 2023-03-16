@@ -1,6 +1,5 @@
-package com.microservice.store.product.domain;
+package com.microservice.store.infrastructure.domain;
 
-import com.microservice.store.infrastructure.domain.BaseDomain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,13 +7,12 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 
-
 @Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product extends BaseDomain implements Serializable {
-    public Product( String productName, String description) {
+    public Product(String productName, String description) {
         this.productName = productName;
         this.description = description;
     }

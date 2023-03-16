@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = ProductApplication.class)
 public class ProductRepositoryTest {
@@ -22,7 +23,7 @@ public class ProductRepositoryTest {
 //        DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
 //        String formattedDate = dateFormat.format(date);
 
-        productRepository.save(new Product("iphone14","iphone14256g4cores"));
+        productRepository.save(new Product("iphone14", "iphone14256g4cores"));
 
         System.out.println(productRepository.findAll().size());
     }
