@@ -1,7 +1,7 @@
 package jpatest;
 
+import com.microservice.store.infrastructure.domain.Product;
 import com.microservice.store.product.ProductApplication;
-import com.microservice.store.product.domain.Product;
 import com.microservice.store.product.mapper.ProductRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;

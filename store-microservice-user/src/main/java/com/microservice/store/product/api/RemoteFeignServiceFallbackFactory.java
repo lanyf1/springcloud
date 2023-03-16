@@ -4,7 +4,9 @@ import com.microservice.store.infrastructure.domain.Product;
 import com.microservice.store.infrastructure.response.ResponseResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.openfeign.FallbackFactory;
+import org.springframework.stereotype.Component;
 
+@Component
 @Slf4j
 public class RemoteFeignServiceFallbackFactory implements FallbackFactory<RemoteProductService> {
     @Override
