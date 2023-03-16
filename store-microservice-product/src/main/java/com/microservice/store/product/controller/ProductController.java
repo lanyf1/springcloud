@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("/product")
@@ -19,12 +20,22 @@ public class ProductController {
 
     @GetMapping("/query/{name}")
     public ResponseResult<Product> getProduct(@PathVariable String name) {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return ResponseResult.success(productService.getProductByName(name));
     }
 
 
     @GetMapping("/hello")
     public ResponseResult<String> getHello() {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return ResponseResult.success("hello");
     }
 

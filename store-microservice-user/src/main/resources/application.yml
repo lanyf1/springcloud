@@ -30,3 +30,16 @@ logging:
 
 server:
   port: ${PORT:8401}
+
+feign:
+  client:
+    config:
+      default:
+        read-timeout: 1000
+        connect-timeout: 1000
+  circuitbreaker:
+    enabled: true
+
+
+
+

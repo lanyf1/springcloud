@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@FeignClient(value = "product" ,path = "/product")
+@FeignClient(value = "product" ,path = "/product" ,fallbackFactory = RemoteFeignServiceFallbackFactory.class)
 public interface RemoteProductService {
 
     @GetMapping("/query/{name}")
