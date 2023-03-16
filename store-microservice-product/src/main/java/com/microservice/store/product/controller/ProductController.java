@@ -3,6 +3,7 @@ package com.microservice.store.product.controller;
 import com.microservice.store.infrastructure.domain.Product;
 import com.microservice.store.infrastructure.response.ResponseResult;
 import com.microservice.store.product.service.ProductService;
+import org.apache.commons.lang3.RandomUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +22,7 @@ public class ProductController {
     @GetMapping("/query/{name}")
     public ResponseResult<Product> getProduct(@PathVariable String name) {
         try {
-            TimeUnit.SECONDS.sleep(3);
+            TimeUnit.SECONDS.sleep(RandomUtils.nextLong(0,5));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -31,11 +32,6 @@ public class ProductController {
 
     @GetMapping("/hello")
     public ResponseResult<String> getHello() {
-        try {
-            TimeUnit.SECONDS.sleep(3);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return ResponseResult.success("hello");
     }
 

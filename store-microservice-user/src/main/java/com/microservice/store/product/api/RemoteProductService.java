@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface RemoteProductService {
 
     @GetMapping("/query/{name}")
-    public ResponseResult<Product> getProduct(@PathVariable("name") String productName);
+    public ResponseResult<Product> getProduct(@PathVariable("name") String name);
 
 
     @RequestMapping("/hello")

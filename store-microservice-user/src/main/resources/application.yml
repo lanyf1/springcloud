@@ -35,8 +35,8 @@ feign:
   client:
     config:
       default:
-        read-timeout: 1000
-        connect-timeout: 1000
+        read-timeout: 3000
+        connect-timeout: 3000
   sentinel:
     enabled: true
 
